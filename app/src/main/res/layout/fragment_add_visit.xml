@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.visits.AddVisitFragment">
+
+
+    <View
+        android:id="@+id/v_close_sheet"
+        android:layout_width="80dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_rounded_bs"
+        android:backgroundTint="@color/md_grey_300"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_add_visit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_close_sheet">
+
+        <LinearLayout
+            android:id="@+id/ll_visitor_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_add_visitor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_extrabold"
+                android:gravity="start"
+                android:letterSpacing="0.05"
+                android:text="@string/add_visitor"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/md_black_1000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="@string/visitor_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_visitor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_visitor_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="John Doe"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtRegistrationNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="@string/visitor_phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_visitor_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_visitor_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="@string/hint_0723098987"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_visitor_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Visitor Email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_visitor_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_visitor_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="@string/hint_email"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_visitor_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Visitor ID Number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_visitor_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_visitor_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="@string/hint_id"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_add_vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:padding="4dp"
+                android:background="@drawable/bg_spinner">
+
+                <TextView
+                    android:id="@+id/tv_vehicle_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_bold"
+                    android:letterSpacing="0.05"
+                    android:text="Add vehicle"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="end"
+                    android:src="@drawable/baseline_add" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_vehicle_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Vehicle Registration"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_vehicle_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:visibility="gone"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_host_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="KAT 527S"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_vehicle_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Vehicle Model"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_vehicle_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:visibility="gone"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_vehicle_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="Toyota"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_vehicle_colour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Vehicle Colour"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/tl_vehicle_colour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_vehicle_colour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="Blue"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_vehicle_occupants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Number of occupants"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/tl_vehicle_occupants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_vehicle_ouccupants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@drawable/bg_edit_text"
+                    android:fontFamily="@font/nunito_sans"
+                    android:hint="4"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/margin_14"
+                    android:paddingVertical="15dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/md_black_1000"
+                    android:textColorHint="@color/colorTextBackground"
+                    android:textSize="@dimen/font_title_size"
+                    android:theme="@style/Widget.App.EditText"
+                    app:boxBackgroundMode="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tv_building"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="Select Building"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000" />
+
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/sp_buildings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:background="@drawable/bg_spinner"
+                android:hint="building"
+                android:padding="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimaryText"
+                android:textColorHint="@color/colorTextBackground"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/acGuideline2"
+                app:layout_constraintStart_toStartOf="@+id/acGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_return_reason_title"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/colorPrimaryText"
+                app:spinner_divider_color="@color/md_grey_100"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_popup_animation="normal"
+                app:spinner_popup_background="@color/md_white_1000"
+                app:spinner_popup_elevation="14dp" />
+
+            <TextView
+                android:id="@+id/tv_house_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.05"
+                android:text="@string/host"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/md_black_1000"
+                android:visibility="gone" />
+
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/sp_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:background="@drawable/bg_spinner"
+                android:hint="@string/host_house"
+                android:padding="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimaryText"
+                android:textColorHint="@color/colorTextBackground"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/acGuideline2"
+                app:layout_constraintStart_toStartOf="@+id/acGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_return_reason_title"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/colorPrimaryText"
+                app:spinner_divider_color="@color/md_grey_100"
+                app:spinner_divider_show="true"
+                app:spinner_divider_size="0.4dp"
+                app:spinner_popup_animation="normal"
+                app:spinner_popup_background="@color/md_white_1000"
+                app:spinner_popup_elevation="14dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bt_add_visitor"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_rounded_button">
+
+                <TextView
+                    android:id="@+id/btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:letterSpacing="0.05"
+                    android:text="@string/text_add_visitor"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="@dimen/font_title_size"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.movies.streamy.view.utils.LoadingDotsBounce
+                    android:id="@+id/loading"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@color/md_white_1000"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

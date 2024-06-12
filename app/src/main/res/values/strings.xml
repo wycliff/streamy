@@ -1,0 +1,115 @@
+<resources>
+    <string name="text_permissions">Permissions</string>
+    <string name="google_maps_api_key" translatable="false">AIzaSyB0vAGEzDze7mb73i3Z8hjtA3hI4fCt0T8</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_grant_permissions">Grant Permissions</string>
+    <string name="text_gps_disabled">GPS Disabled</string>
+    <string name="text_gps_prompt">Your GPS seems to be disabled, please enable it in the next page in order to proceed.</string>
+    <string name="text_enable">Enable</string>
+    <string name="text_degrees">&#176;</string>
+    <string name="text_min">min</string>
+    <string name="text_current">current</string>
+    <string name="text_max">max</string>
+
+
+    <string name="error_network">Please check your internet connection and try again!</string>
+    <string name="error_generic">"Something went wrong please try again later"!</string>
+    <string name="text_log_in">Log in</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_building">My Building</string>
+    <string name="title_more">More</string>
+    <string name="title_profile">Profile</string>
+    <string name="text_logout">Log Out</string>
+    <string name="text_get_help">Get Help</string>
+    <string name="text_more">More</string>
+    <string name="image">image</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <!--On-boarding-->
+    <string name="text_phone">Invalid phone number</string>
+    <string name="text_required_field">This field is required</string>
+
+    <!--Error messages-->
+    <string name="network_error_msg">Please check if your Internet connection is OK and try again</string>
+    <string name="unknown_error_msg">Something went wrong please try again</string>
+    <string name="text_error_building">Please select a building</string>
+    <string name="text_error_host">Please select a host</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="logout">Log out</string>
+    <string name="proceed">Proceed</string>
+    <string name="ok">OK</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="signout_title">Sign out visitor</string>
+    <string name="signout_visitor_message">You are about to sign out %s who was visiting house %s \n Please add a comment below: </string>
+    <string name="add_ticket">You are about</string>
+    <string name="title_my_building">My Buildings</string>
+    <string name="text_visits">Visits</string>
+    <string name="text_manage_visits">MANAGE VISITS</string>
+    <string name="text_manage_parking">MANAGE PARKING</string>
+    <string name="text_tickets">ISSUE TICKETS</string>
+    <string name="text_main_title">Pro-Keja \n Security</string>
+    <string name="text_feature_unavailable">This feature is currently unavailable</string>
+    <string name="sign_out">Sign Out</string>
+
+
+    <string name="add_visitor">ADD VISITOR</string>
+    <string name="visitor_name">Visitor Name</string>
+    <string name="visitor_phone">Visitor Phone</string>
+    <string name="hint_0723098987">0723098987</string>
+    <string name="host_name">Host Name</string>
+    <string name="text_visitor_name">Visitor Name</string>
+    <string name="text_add_ticket">ADD TICKET</string>
+    <string name="view_units">View Units</string>
+    <string name="text_no_active_buildings">No Active Buildings at the moment</string>
+    <string name="title_activity_units">UnitsActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="units">Units</string>
+    <string name="sign_in_visitor">Add Visitor</string>
+    <string name="raise_ticket">Raise issue</string>
+    <string name="unit_details_title">%s Unit Details</string>
+
+    <string name="unit_details">Tenant: %s , reachable via: %s </string>
+    <string name="unit_vacant">This unit is currently vacant</string>
+    <string name="no_active">No Active visits at the moment</string>
+    <string name="hint_email">johndoe@gmail.com</string>
+    <string name="hint_id">332569987</string>
+    <string name="text_add_visitor">Add Visitor</string>
+    <string name="host_house">Host house</string>
+    <string name="house">House</string>
+    <string name="host">Host</string>
+    <string name="ticket">Ticket:</string>
+    <string name="report_time">Report time:</string>
+    <string name="comment">Comment:</string>
+    <string name="comments_title">View Comments</string>
+    <string name="enter_comment">Please add a comment below: </string>
+    <string name="comment_title">Add Comment</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_active_parked_vehicles">No Active parked vehicles</string>
+    <string name="parked_vehicles">Parked vehicles</string>
+
+    <string name="amount_due">Amount due:</string>
+    <string name="payment_status">Payment status:</string>
+    <string name="time_in">Time in:</string>
+    <string name="time_out">Time to leave:</string>
+    <string name="text_paid">PAID</string>
+    <string name="text_pending_amount">PENDING</string>
+    <string name="submit_ticket">Submit Ticket</string>
+    <string name="search_vehicle">Search Vehicle</string>
+    <string name="search_vehicle_title">SEARCH VEHICLE</string>
+    <string name="vehicle_not_found">Vehicle not found</string>
+    <string name="time_paid">Time paid:</string>
+    <string name="amount_paid">Amount paid:</string>
+    <string name="balance">Balance:</string>
+    <string name="time_spent">Time spent:</string>
+
+
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B6E83D</color>
+    <color name="colorPrimaryTransparent">#1A3945A2</color>
+    <color name="colorPrimaryLight">#FFFFFF</color>
+    <color name="colorPrimaryDark">#B6E83D</color>
+    <color name="colorAccent">#B6E83D</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorBackground">#E5E5E5</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorTextIconBg">#503A7BD5</color>
+    <color name="colorBgTab">#f5f5f5</color>
+    <color name="colorBottomNavBackground">#FBFCFC</color>
+    <color name="colorBorder">#e0e0e0</color>
+    <color name="image_marker">#9C8A7A</color>
+    <color name="layout_background">#F7F9FC</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_sunny_secondary">#47AB2F</color>
+    <color name="bg_cloudy_secondary">#54717A</color>
+    <color name="bg_rainy_secondary">#57575D</color>
+
+    <color name="bg_sunny">#F6CC74</color>
+    <color name="bg_cloudy">#A4BCBC</color>
+    <color name="bg_rainy">#5A5A5E</color>
+
+    <color name="error_color">#9B101C</color>
+
+    <!--grey-->
+    <color name="grey">#6b6d71</color>
+    <color name="gray">#b6b6b6</color>
+    <color name="md_grey_30">#f7f7f7</color>
+    <color name="md_grey_50">#FAFAFA</color>
+    <color name="md_grey_100">#F5F5F5</color>
+    <color name="md_grey_200">#CCCCCC</color>
+    <color name="md_grey_300">#e0e0e0</color>
+    <color name="md_grey_400">#BDBDBD</color>
+    <color name="md_grey_500">#9e9e9e</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_800">#424242</color>
+    <color name="md_grey_900">#474545</color>
+    <color name="dark_grey">#333333</color>
+    <color name="md_black_1000">#000000</color>
+    <color name="md_white_1000">#FFFFFF</color>
+    <color name="placeholderColor">#D1D1D1</color>
+    <color name="pin_view_background">#EFF1F5</color>
+    <color name="placeholder_grey">#AAADC4</color>
+    <color name="spinner_bg">#F0F3F7</color>
+
+    <color name="grey_line">#D6D6D6</color>
+
+
+    <!-- Text -->
+    <color name="colorText">#504D4D</color>
+    <color name="colorTextLight">#606266</color>
+    <color name="colorTextDisabled">#9E9E9E</color>
+    <color name="colorTextError">#B00020</color>
+    <color name="colorTextBackground">#909399</color>
+    <color name="colorTextSubTitle">#303133</color>
+
+    <!--Other-->
+    <color name="switch_btn_checked">#73FF4F</color>
+    <color name="neutralGray30">#F0F3F7</color>
+    <color name="Orange">#f57e20</color>
+    <color name="OrangeDark">#DF6E00</color>
+    <color name="tertiaryBrand">#EE7D00</color>
+    <color name="tertiaryBrandTangerine">#CC6100</color>
+    <color name="superLightOrange">#e9c8aa</color>
+    <color name="disableButton">#808080</color>
+    <color name="Rejected">#D6777A</color>
+    <color name="Submited">#887551</color>
+    <color name="Approved">#FF008100</color>
+    <color name="button_secondary">#DBE2F7</color>
+    <color name="card_background">#FBDECF</color>
+    <color name="notes_card_background">#FDDB97</color>
+    <color name="upload_document_background">#E2E7ED</color>
+
+    <!-- success colors -->
+    <color name="md_success_color">#71C341</color>
+
+    <!-- info color -->
+    <color name="md_info_color">#4688D6</color>
+
+    <!-- error color -->
+    <color name="md_error_color">#9B101C</color>
+
+</resources>

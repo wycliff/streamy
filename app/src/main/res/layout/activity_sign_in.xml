@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/acGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/acGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
+        app:layout_constraintEnd_toStartOf="@+id/acGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/acGuideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="64dp"
+            android:paddingBottom="@dimen/margin_16">
+
+            <!--Add an image -->
+
+            <TextView
+                android:id="@+id/login_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:fontFamily="@font/nunito_extrabold"
+                android:gravity="start"
+                android:letterSpacing="0.05"
+                android:text="Log in"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/login_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/login_txt"
+                app:layout_constraintTop_toBottomOf="@+id/login_txt">
+
+                <TextView
+                    android:id="@+id/edit_text_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_sans"
+                    android:gravity="start"
+                    android:letterSpacing="0.03"
+                    android:text="Enter Phone Number "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/llPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:background="@drawable/bg_round_edit_text"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/acGuideline2"
+                    app:layout_constraintStart_toStartOf="@+id/acGuideline1"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_text_phone">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:ccpDialog_allowSearch="false"
+                        app:ccpDialog_backgroundColor="@color/md_white_1000"
+                        app:ccpDialog_keyboardAutoPopup="false"
+                        app:ccpDialog_showTitle="false"
+                        app:ccpDialog_textColor="@color/colorPrimaryText"
+                        app:ccp_arrowColor="@color/colorPrimaryText"
+                        app:ccp_arrowSize="@dimen/font_h5_size"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_autoDetectLanguage="true"
+                        app:ccp_contentColor="@color/colorPrimaryText"
+                        app:ccp_customMasterCountries="KE,CI,NG,UG"
+                        app:ccp_defaultLanguage="ENGLISH"
+                        app:ccp_defaultNameCode="KE"
+                        app:ccp_hintExampleNumber="true"
+                        app:ccp_rememberLastSelection="true"
+                        app:ccp_textSize="@dimen/font_title_x_size" />
+
+                    <EditText
+                        android:id="@+id/editTextMobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_round_edit_text"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:hint="723017872"
+                        android:inputType="phone"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="@dimen/font_title_x_size" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_enter_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_sans"
+                    android:gravity="start"
+                    android:letterSpacing="0.05"
+                    android:text="Enter password"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/md_grey_900"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tl_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/bg_round_edit_text"
+                        android:fontFamily="@font/nunito_sans"
+                        android:hint="Pin Code"
+                        android:paddingHorizontal="@dimen/margin_14"
+                        android:paddingVertical="15dp"
+                        android:singleLine="true"
+                        android:inputType="textPassword"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textColorHint="@color/colorTextBackground"
+                        android:textSize="@dimen/font_title_size"
+                        android:theme="@style/Widget.App.EditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_sign_in"
+        style="@style/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_rounded_button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
+        app:layout_constraintEnd_toStartOf="@+id/acGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/acGuideline1">
+
+        <TextView
+            android:id="@+id/btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:letterSpacing="0.05"
+            android:text="Sign in"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/font_title_x_size"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.movies.streamy.view.utils.LoadingDotsBounce
+            android:id="@+id/loading"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@color/md_white_1000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:text="Forgot password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/font_body_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/acGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/acGuideline1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

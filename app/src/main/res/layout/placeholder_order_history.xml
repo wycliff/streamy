@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/space_16">
+
+    <ImageView
+        android:id="@+id/bt_expand"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end|right"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_round_placeholder"
+        android:backgroundTint="@color/placeholderColor"
+        android:contentDescription="@string/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/document_label"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_round_placeholder"
+        android:backgroundTint="@color/placeholderColor"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_expand"
+        app:layout_constraintStart_toEndOf="@+id/bt_expand"
+        app:layout_constraintTop_toTopOf="@+id/bt_expand" />
+
+    <View
+        android:id="@+id/document_status"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:background="@drawable/button_round_placeholder"
+        android:backgroundTint="@color/placeholderColor"
+        app:layout_constraintBottom_toBottomOf="@+id/document_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/document_label"
+        app:layout_constraintTop_toTopOf="@+id/document_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".view.visits.AddVisitFragment">
+
+<View
+    android:id="@+id/v_close_sheet"
+    android:layout_width="80dp"
+    android:layout_height="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_rounded_bs"
+    android:backgroundTint="@color/md_grey_300"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/tv_add_visitor"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="16dp"
+    android:fontFamily="@font/nunito_extrabold"
+    android:gravity="start"
+    android:letterSpacing="0.05"
+    android:text="@string/text_add_ticket"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="@color/md_black_1000"
+    android:textSize="18sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/v_close_sheet" />
+
+<LinearLayout
+    android:id="@+id/ll_visitor_form"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_add_visitor">
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:letterSpacing="0.05"
+        android:text="Reporter's Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/md_black_1000" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_visitor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:visibility="gone"
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/nunito_sans"
+            android:hint="John Doe"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/margin_14"
+            android:paddingVertical="15dp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/colorTextBackground"
+            android:textSize="@dimen/font_title_size"
+            android:theme="@style/Widget.App.EditText"
+            app:boxBackgroundMode="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtRegistrationNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_bold"
+        android:letterSpacing="0.05"
+        android:text="Issue: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/md_black_1000" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_issue_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/nunito_sans"
+            android:hint=""
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/margin_14"
+            android:paddingVertical="15dp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/colorTextBackground"
+            android:textSize="@dimen/font_title_size"
+            android:theme="@style/Widget.App.EditText"
+            app:boxBackgroundMode="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_house_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:letterSpacing="0.05"
+        android:text="Comment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/md_black_1000" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:visibility="gone"
+        android:id="@+id/et_house_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/nunito_sans"
+            android:hint=""
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/margin_14"
+            android:paddingVertical="15dp"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@color/md_black_1000"
+            android:textColorHint="@color/colorTextBackground"
+            android:textSize="@dimen/font_title_size"
+            android:theme="@style/Widget.App.EditText"
+            app:boxBackgroundMode="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/bt_add_ticket"
+    style="@style/buttonStyle"
+    android:layout_width="0dp"
+    android:layout_height="48dp"
+    android:layout_marginVertical="32dp"
+    android:layout_marginBottom="20dp"
+
+    android:background="@drawable/bg_rounded_button"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@+id/ll_visitor_form"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/ll_visitor_form"
+    app:layout_constraintTop_toBottomOf="@+id/ll_visitor_form"
+    app:layout_constraintVertical_bias="0.0">
+
+    <TextView
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:letterSpacing="0.05"
+        android:text="@string/submit_ticket"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/font_title_size"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.movies.streamy.view.utils.LoadingDotsBounce
+        android:id="@+id/loading"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@color/md_white_1000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

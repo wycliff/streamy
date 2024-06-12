@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "131401183799",
+    "project_id": "pro-keja",
+    "storage_bucket": "pro-keja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131401183799:android:89680639229e6ff7acc5b2",
+        "android_client_info": {
+          "package_name": "com.prokeja.security.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlqbrYe9qgcEg_RD-3YjLzDbwzX9AdfAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131401183799:android:89680639229e6ff7acc5b2",
+        "android_client_info": {
+          "package_name": "com.prokeja.security"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlqbrYe9qgcEg_RD-3YjLzDbwzX9AdfAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
