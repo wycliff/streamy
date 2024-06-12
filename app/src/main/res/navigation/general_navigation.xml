@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_building"
-        android:name="com.movies.streamy.view.buildings.BuildingsFragment"
+        android:name="com.movies.streamy.view.series.SeriesFragment"
         android:label="@string/title_building"
         tools:layout="@layout/fragment_orders" />
 
