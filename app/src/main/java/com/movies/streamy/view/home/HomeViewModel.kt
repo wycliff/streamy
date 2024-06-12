@@ -101,7 +101,6 @@ class HomeViewModel @Inject constructor(
                     _viewState.postValue(HomeViewState.Success)
                     val data = result.body
 
-                    Log.e("","_NIMEBEAT1:"+data)
                     _movieIds.postValue(data.results)
                 }
 
