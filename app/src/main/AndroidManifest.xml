@@ -22,15 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.StreamyApp">
-        <activity
-            android:name="com.movies.streamy.view.parking.ParkingActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.movies.streamy.view.comments.CommentsActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.movies.streamy.view.buildings.UnitsActivity"
-            android:exported="false" />
+
         <activity
             android:name="com.movies.streamy.view.tickets.TicketsActivity"
             android:exported="false" />
@@ -39,21 +31,15 @@
             android:exported="false" />
         <activity
             android:name="com.movies.streamy.view.MainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main2" />
-        <activity
-            android:name="com.movies.streamy.view.login.SignInActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.movies.streamy.view.splash.SplashActivity"
             android:exported="true"
-            android:noHistory="true">
+            android:label="@string/title_activity_main2" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -29,9 +29,7 @@ class HomeModule {
         @Provides
         fun provideHomeDataSource(
             homeApiInterface: HomeApiInterface,
-            buildingDao: BuildingDao,
-            unitDao: UnitDao
-        ): IHomeDataSource = HomeDataSourceImpl(homeApiInterface, unitDao, buildingDao)
+        ): IHomeDataSource = HomeDataSourceImpl(homeApiInterface)
     }
 
     @Module

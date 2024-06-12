@@ -29,6 +29,4 @@ class MoreViewModel @Inject constructor(
         }
     }
 
-    val currentUser: LiveData<UserEntity?>
-        get() = homeRepository.getCurrentUser(0).asLiveData()
 }

@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.movies.streamy.R
 import com.movies.streamy.databinding.FragmentMoreBinding
-import com.movies.streamy.view.splash.SplashActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -41,17 +40,7 @@ class MoreFragment : Fragment() {
     }
 
     private fun initViews() {
-        moreViewModel.currentUser.observe(requireActivity()) { currentUser ->
-            currentUser?.let {
-                binding?.tvUserName?.text = it.firstName
-                binding?.tvCompanyName?.text = it.securityCompanyName
-                binding?.profileImage?.text = it.firstName?.get(0).toString()
-            }
-        }
 
-        binding?.clLogout?.setOnClickListener {
-            logout()
-        }
     }
 
     override fun onDestroyView() {
@@ -69,18 +58,8 @@ class MoreFragment : Fragment() {
         builder.setPositiveButton(
             resources.getString(R.string.logout)
         ) { _: DialogInterface?, _: Int ->
-
-            //todo: update online status (switch off)
             moreViewModel.logout()
 
-            val x = Intent(requireContext(), SplashActivity::class.java)
-            val animation = ActivityOptions.makeCustomAnimation(
-                requireContext(),
-                R.anim.cb_fade_in,
-                R.anim.cb_face_out
-            ).toBundle()
-
-            startActivity(x, animation)
             activity?.finish()
         }
         builder.setNegativeButton(

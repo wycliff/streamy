@@ -55,7 +55,7 @@ object AppUtil {
 
         val snackBar = Snackbar.make(view, message, BaseTransientBottomBar.LENGTH_LONG)
             .apply {
-                this.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
+                this.view.findViewById<TextView>(R.id.snackbar_text)
                     ?.apply {
                         maxLines = 5
                         textSize = 15F

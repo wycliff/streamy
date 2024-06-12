@@ -63,7 +63,7 @@ fun Context.snackbar(view: View, message: String?, backgroundTint: Int = R.color
 
     val snackbar = Snackbar.make(view, message, BaseTransientBottomBar.LENGTH_LONG)
         .apply {
-            this.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
+            this.view.findViewById<TextView>(R.id.snackbar_text)
                 ?.apply {
                     maxLines = 5
                     textSize = 15F
@@ -90,7 +90,7 @@ fun Context.snackBarWithDuration(
 
     val snackbar = Snackbar.make(view, message, BaseTransientBottomBar.LENGTH_LONG)
         .apply {
-            this.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text)
+            this.view.findViewById<TextView>(R.id.snackbar_text)
                 ?.apply {
                     maxLines = 5
                     textSize = 15F

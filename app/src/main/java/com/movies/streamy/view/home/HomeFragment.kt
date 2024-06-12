@@ -1,21 +1,19 @@
 package com.movies.streamy.view.home
 
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
 import androidx.annotation.RequiresApi
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.movies.streamy.databinding.FragmentHomeBinding
+import com.movies.streamy.model.dataSource.network.data.response.MovieId
 import com.movies.streamy.utils.Prefs
-import com.movies.streamy.view.parking.ParkingActivity
-import com.movies.streamy.view.tickets.TicketsActivity
-import com.movies.streamy.view.visits.VisitsActivity
+import com.movies.streamy.utils.observe
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
@@ -26,11 +24,13 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private lateinit var viewModel: HomeViewModel
 
-
-    private val binding get() = _binding
+    private val binding get() = _binding!!
     private lateinit var prefs: Prefs
 
     private var securityGuardId: String? = null
+
+    private val movieAdapter =
+        MovieIdAdapter { data: MovieId -> itemClicked(data) }
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,52 +52,100 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.homeGrid?.let { setClickEvent(it) }
         initViews()
     }
 
     private fun initViews() {
-        viewModel.currentUser.observe(requireActivity()) { currentUser ->
-            securityGuardId = currentUser?.security_guard_id
-            securityGuardId?.let {
-                //get buildings and units
-                viewModel.fetchBuildings(securityGuardId)
-            }
+        showShimmerEffect()
+        viewModel.getMovieIds()
+        setUpObservers()
+        setUpAdapter()
+    }
+
+    private fun setUpObservers() {
+        observe(viewModel.movieIds, ::setUpRecyclerView)
+        observe(viewModel.viewState, ::onViewStateChanged)
+    }
+
+    private fun setUpAdapter() {
+        binding.rvMovies.apply {
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            setHasFixedSize(false)
+            (layoutManager as LinearLayoutManager).reverseLayout = true
+            (layoutManager as LinearLayoutManager).stackFromEnd = true
+            adapter?.setHasStableIds(true)
+            adapter = movieAdapter
         }
+    }
+
+    private fun setUpRecyclerView(movieIdList: List<MovieId?>?) {
+        if (movieIdList?.isEmpty() == true) {
+            binding.noDataGroup.visibility = View.VISIBLE
+        } else {
+            hideShimmerEffect()
+            movieAdapter.submitList(movieIdList)
+        }
+    }
+
+    private fun onViewStateChanged(state: HomeViewState) {
+        hideShimmerEffect()
+        when (state) {
+            is HomeViewState.Loading -> {
+                showShimmerEffect()
+                binding.noTextOrder.visibility = View.GONE
+                binding.noImageOrder.visibility = View.GONE
+            }
+
+            is HomeViewState.Success -> {
+                hideShimmerEffect()
+                binding.noTextOrder.visibility = View.GONE
+                binding.noImageOrder.visibility = View.GONE
+            }
+
+            is HomeViewState.Error -> {
+                hideShimmerEffect()
+//                showSnackBar(state.errorMessage, false)
+                binding.noTextOrder.visibility = View.VISIBLE
+                binding.noImageOrder.visibility = View.VISIBLE
+            }
+
+            else -> {}
+        }
+    }
+
+    private fun showShimmerEffect() {
+        binding.shimmerFrameLayout.startShimmer()
+        binding.shimmerFrameLayout.visibility = View.VISIBLE
+        binding.rvMovies.visibility = View.GONE
+    }
+
+    private fun hideShimmerEffect() {
+        binding.shimmerFrameLayout.stopShimmer()
+        binding.shimmerFrameLayout.visibility = View.GONE
+        binding.rvMovies.visibility = View.VISIBLE
+    }
+
+    private fun itemClicked(data: MovieId) {
+        //todo
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
     }
 
-    private fun setClickEvent(gridLayout: GridLayout) {
-        for (i in 0 until gridLayout.childCount) {
-            val cardView = gridLayout.getChildAt(i) as CardView
-            cardView.setOnClickListener {
-
-                when (i) {
-                    0 -> {
-                        val intent = Intent(requireContext(), VisitsActivity::class.java)
-                        startActivity(intent)
-                    }
-
-                    1 -> {
-                        val intent = Intent(requireContext(), TicketsActivity::class.java)
-                        startActivity(intent)
-                    }
-
-                    2 -> {
-                        val intent = Intent(requireContext(), ParkingActivity::class.java)
-                        startActivity(intent)
-                    }
-                }
-            }
-        }
-    }
-
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
+
+//    private fun showSnackBar(message: String?, isSuccess: Boolean = true) {
+//        binding.root.let {
+//            this.snackbar(
+//                it,
+//                message,
+//                if (isSuccess) R.color.md_info_color else R.color.md_error_color
+//            )
+//        }
+//    }
 }
