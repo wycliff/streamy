@@ -63,7 +63,7 @@ android {
         create("prod") {
             resValue("string", "app_name", "Streamy")
             buildConfigField("String", "ENVIRONMENT", "\"prod\"")
-            buildConfigField("String", "BASE_URL", "\"https://prod-api.prokeja.co.ke/\"")
+            buildConfigField("String", "BASE_URL", "\"\"")
         }
 
         create("staging") {
@@ -71,7 +71,7 @@ android {
             versionNameSuffix = "-test"
             resValue("string", "app_name", "Streamy Test")
             buildConfigField("String", "ENVIRONMENT", "\"staging\"")
-            buildConfigField("String", "BASE_URL", "\"https://staging-api.prokeja.co.ke/\"")
+            buildConfigField("String", "BASE_URL", "\"\"")
         }
     }
 }
